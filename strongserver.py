@@ -110,7 +110,7 @@ if __name__ == '__main__':
                 connection.send(M4.encode())
                 print('signature of client is valid')
                 print('the shared secrety is', Kb)
-                print('the total time is', end-start)
+                print('the total time is', end-start, "s")
             else:
                 print('signature of client is invalid, protocol fails')
             token=1

@@ -105,7 +105,7 @@ if __name__== '__main__':
                 end = time.time()
                 print('signature of sever is valid')
                 print ('the shared secret is', Ka)
-                print('the time assumption:', end-start)
+                print('the time assumption:', end-start, "s")
             else:
                 print('signature of server is invalid, protocol fails')
             token=1
