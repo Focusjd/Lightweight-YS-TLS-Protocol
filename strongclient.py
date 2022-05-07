@@ -62,7 +62,9 @@ if __name__== '__main__':
             SKa = keypair._priv[1]
             Ra=random.randint(000000,999999)
             Ua = Ra + int(SKa)
+            time0 = time.time()
             UA=mul(c_p,c_q,c_n,g,Ua)
+            end0 = time.time()-time0
             (UAx, UAy) = UA
             # 1.2) A->B: M1=(helloA,PKax,PKay)
             M1='helloA'+','+str(PKax)+','+str(PKay)+',' + str(UAx)+','+str(UAy)
@@ -106,7 +108,7 @@ if __name__== '__main__':
                 end = time.time()
                 print('signature of sever is valid')
                 print ('the shared secret is', Ka)
-                print('the time assumption:', end-start, "s")
+                print('the time assumption:', end-start+end0, "s")
             else:
                 print('signature of server is invalid, protocol fails')
             token=1

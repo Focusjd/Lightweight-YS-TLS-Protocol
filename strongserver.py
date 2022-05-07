@@ -72,7 +72,9 @@ if __name__ == '__main__':
             SKb = keypair._priv[1]     
             Rb=random.randint(000000,999999)
             Ub = Rb +int( SKb)  
+            start0 = time.time()
             UB = mul(c_p,c_q,c_n,g,Ub)    
+            end0 = time.time()-start0
             (UBx, UBy) = UB
             # 2.3) B->A: M2=(helloB,PKbx,PKby)
             M2='helloB'+','+str(PKbx)+','+str(PKby)+','+str(UBx)+','+str(UBy)
@@ -110,7 +112,7 @@ if __name__ == '__main__':
                 connection.send(M4.encode())
                 print('signature of client is valid')
                 print('the shared secrety is', Kb)
-                print('the total time is', end-start, "s")
+                print('the total time is', end-start+end0, "s")
             else:
                 print('signature of client is invalid, protocol fails')
             token=1
