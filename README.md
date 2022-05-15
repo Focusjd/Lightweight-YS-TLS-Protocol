@@ -6,4 +6,6 @@ To run the codes, You need to run the client and server side corresponding to th
 2. YS-balanced protocol
 3. Weak server – strong client Protocol
 4. Strong server – weak client Protocol
-$Note: change the server_ip for clients is necessary$
+
+
+Note: change the server_ip for clients is necessary
