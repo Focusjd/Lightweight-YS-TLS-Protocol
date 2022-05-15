@@ -21,5 +21,6 @@ For client you need to config the server ip to your traget server
     server_port = 10005
     
 For server you need to make sure the open socket port is in same setting with the server
+
     HOST = ""
     PORT = 10005
